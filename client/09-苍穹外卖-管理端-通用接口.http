@@ -1,0 +1,31 @@
+# 苍穹外卖-管理端-通用接口
+
+### POST 文件上传
+
+POST /admin/common/upload HTTP/1.1
+Host: {{host}}
+token: {{jwt}}
+Content-Type: application/json
+
+yaml
+file: string
+
+苍穹外卖/用户端
+
+### GET appid 测试接口
+
+GET /sns/jscode2session HTTP/1.1
+Host: {{host}}
+token: {{jwt}}
+
+### GET wx 支付成功测试
+
+GET /notify/sudoPaySuccess HTTP/1.1
+Host: {{host}}
+token: {{jwt}}
+
+"{\r
+
+\ \"out_trade_no\": 1704638769331\r
+
+}"

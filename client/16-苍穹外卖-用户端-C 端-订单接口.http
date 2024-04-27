@@ -1,0 +1,64 @@
+# 苍穹外卖-用户端-C 端-订单接口
+
+### GET 催单
+
+GET /user/order/reminder/{id} HTTP/1.1
+Host: {{host}}
+token: {{jwt}}
+
+### POST 再来一单
+
+POST /user/order/repetition/{id} HTTP/1.1
+Host: {{host}}
+token: {{jwt}}
+Content-Type: application/json
+
+### GET 历史订单查询
+
+GET /user/order/historyOrders HTTP/1.1
+Host: {{host}}
+token: {{jwt}}
+
+### PUT 取消订单
+
+PUT /user/order/cancel/{id} HTTP/1.1
+Host: {{host}}
+token: {{jwt}}
+Content-Type: application/json
+
+### GET 查询订单详情
+
+GET /user/order/orderDetail/{id} HTTP/1.1
+Host: {{host}}
+token: {{jwt}}
+
+### POST 用户下单
+
+POST /user/order/submit HTTP/1.1
+Host: {{host}}
+token: {{jwt}}
+Content-Type: application/json
+
+{
+"addressBookId": 0,
+"amount": 0,
+"deliveryStatus": 0,
+"estimatedDeliveryTime": "yyyy-MM-dd HH:mm:ss",
+"packAmount": 0,
+"payMethod": 0,
+"remark": "string",
+"tablewareNumber": 0,
+"tablewareStatus": 0
+}
+
+### PUT 订单支付
+
+PUT /user/order/payment HTTP/1.1
+Host: {{host}}
+token: {{jwt}}
+Content-Type: application/json
+
+{
+"orderNumber": "string",
+"payMethod": 0
+}

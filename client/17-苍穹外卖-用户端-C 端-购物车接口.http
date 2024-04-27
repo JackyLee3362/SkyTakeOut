@@ -1,0 +1,39 @@
+# 苍穹外卖-用户端-C 端-购物车接口
+
+### POST 删除购物车中一个商品
+
+POST /user/shoppingCart/sub HTTP/1.1
+Host: {{host}}
+token: {{jwt}}
+Content-Type: application/json
+
+{
+"dishFlavor": "string",
+"dishId": 0,
+"setmealId": 0
+}
+
+### GET 查看购物车
+
+GET /user/shoppingCart/list HTTP/1.1
+Host: {{host}}
+token: {{jwt}}
+
+### POST 添加购物车
+
+POST /user/shoppingCart/add HTTP/1.1
+Host: {{host}}
+token: {{jwt}}
+Content-Type: application/json
+
+{
+"dishFlavor": "string",
+"dishId": 0,
+"setmealId": 0
+}
+
+### DELETE 清空购物车
+
+DELETE /user/shoppingCart/clean HTTP/1.1
+Host: {{host}}
+token: {{jwt}}

@@ -1,0 +1,25 @@
+# 苍穹外卖-管理端-工作台接口
+
+### GET 查询今日运营数据
+
+GET /admin/workspace/businessData HTTP/1.1
+Host: {{host}}
+token: {{jwt}}
+
+### GET 查询套餐总览
+
+GET /admin/workspace/overviewSetmeals HTTP/1.1
+Host: {{host}}
+token: {{jwt}}
+
+### GET 查询菜品总览
+
+GET /admin/workspace/overviewDishes HTTP/1.1
+Host: {{host}}
+token: {{jwt}}
+
+### GET 查询订单管理数据
+
+GET /admin/workspace/overviewOrders HTTP/1.1
+Host: {{host}}
+token: {{jwt}}

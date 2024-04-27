@@ -1,0 +1,7 @@
+# 苍穹外卖-用户端-C 端-分类接口
+
+### GET 条件查询
+
+GET /user/category/list HTTP/1.1
+Host: {{host}}
+token: {{jwt}}

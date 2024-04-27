@@ -1,0 +1,7 @@
+# 苍穹外卖-用户端-C 端-店铺操作接口
+
+### GET 获取营业状态
+
+GET /user/shop/status HTTP/1.1
+Host: {{host}}
+token: {{jwt}}

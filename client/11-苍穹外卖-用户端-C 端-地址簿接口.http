@@ -1,0 +1,84 @@
+# 苍穹外卖-用户端-C 端-地址簿接口
+
+### POST 新增地址
+
+POST /user/addressBook HTTP/1.1
+Host: {{host}}
+token: {{jwt}}
+Content-Type: application/json
+
+{
+"cityCode": "string",
+"cityName": "string",
+"consignee": "string",
+"detail": "string",
+"districtCode": "string",
+"districtName": "string",
+"id": 0,
+"isDefault": 0,
+"label": "string",
+"phone": "string",
+"provinceCode": "string",
+"provinceName": "string",
+"sex": "string",
+"userId": 0
+}
+
+### PUT 根据 id 修改地址
+
+PUT /user/addressBook HTTP/1.1
+Host: {{host}}
+token: {{jwt}}
+Content-Type: application/json
+
+{
+"cityCode": "string",
+"cityName": "string",
+"consignee": "string",
+"detail": "string",
+"districtCode": "string",
+"districtName": "string",
+"id": 0,
+"isDefault": 0,
+"label": "string",
+"phone": "string",
+"provinceCode": "string",
+"provinceName": "string",
+"sex": "string",
+"userId": 0
+}
+
+### DELETE 根据 id 删除地址
+
+DELETE /user/addressBook HTTP/1.1
+Host: {{host}}
+token: {{jwt}}
+
+### GET 查询当前登录用户的所有地址信息
+
+GET /user/addressBook/list HTTP/1.1
+Host: {{host}}
+token: {{jwt}}
+
+### GET 查询默认地址
+
+GET /user/addressBook/default HTTP/1.1
+Host: {{host}}
+token: {{jwt}}
+
+### PUT 设置默认地址
+
+PUT /user/addressBook/default HTTP/1.1
+Host: {{host}}
+token: {{jwt}}
+Content-Type: application/json
+
+{
+"id": 0
+}
+
+### GET 根据 id 查询地址
+
+GET /user/addressBook/{id} HTTP/1.1
+Host: {{host}}
+token: {{jwt}}

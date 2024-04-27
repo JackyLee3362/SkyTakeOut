@@ -1,0 +1,7 @@
+# 苍穹外卖-用户端-C 端-菜品浏览接口
+
+### GET 根据分类 id 查询菜品
+
+GET /user/dish/list HTTP/1.1
+Host: {{host}}
+token: {{jwt}}

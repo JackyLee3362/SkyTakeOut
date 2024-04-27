@@ -1,0 +1,13 @@
+# 苍穹外卖-用户端-C 端-套餐浏览接口
+
+### GET 根据分类 id 查询套餐
+
+GET /user/setmeal/list HTTP/1.1
+Host: {{host}}
+token: {{jwt}}
+
+### GET 根据套餐 id 查询包含的菜品
+
+GET /user/setmeal/dish/{id} HTTP/1.1
+Host: {{host}}
+token: {{jwt}}

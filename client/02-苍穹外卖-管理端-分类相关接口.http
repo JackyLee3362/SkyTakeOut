@@ -1,0 +1,58 @@
+# 苍穹外卖-管理端-分类相关接口
+
+### PUT 修改分类
+
+PUT /admin/category HTTP/1.1
+Host: {{host}}
+token: {{jwt}}
+Content-Type: application/json
+
+{
+"id": 0,
+"name": "string",
+"sort": 0,
+"type": 0
+}
+
+### POST 新增分类
+
+POST /admin/category HTTP/1.1
+Host: {{host}}
+token: {{jwt}}
+Content-Type: application/json
+
+{
+"id": 0,
+"name": "string",
+"sort": 0,
+"type": 0
+}
+
+### DELETE 根据 id 删除分类
+
+DELETE /admin/category HTTP/1.1
+Host: {{host}}
+token: {{jwt}}
+
+### GET 分类分页查询
+@page=1
+@pageSize=10
+# type表示分类类型，1 表示菜品分类，2 表示套餐分类
+@type=1
+
+GET /admin/category/page?page={{page}}&pageSize={{pageSize}} HTTP/1.1
+Host: {{host}}
+token: {{jwt}}
+
+### POST 启用、禁用分类
+
+POST /admin/category/status/{status} HTTP/1.1
+Host: {{host}}
+token: {{jwt}}
+Content-Type: application/json
+
+### GET 根据类型查询分类
+# ?page=1&pageSize=10&type=1&name=传统主食
+GET /admin/category/list?page=1&pageSize=10&type=2 HTTP/1.1
+Host: {{host}}
+token: {{jwt}}

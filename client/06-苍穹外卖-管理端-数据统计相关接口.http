@@ -1,0 +1,31 @@
+# 苍穹外卖-管理端-数据统计相关接口
+
+### GET 导出 Excel 报表接口
+
+GET /admin/report/export HTTP/1.1
+Host: {{host}}
+token: {{jwt}}
+
+### GET 查询销量排名 top10 接口
+
+GET /admin/report/top10 HTTP/1.1
+Host: {{host}}
+token: {{jwt}}
+
+### GET 用户统计接口
+
+GET /admin/report/userStatistics HTTP/1.1
+Host: {{host}}
+token: {{jwt}}
+
+### GET 营业额统计接口
+
+GET /admin/report/turnoverStatistics HTTP/1.1
+Host: {{host}}
+token: {{jwt}}
+
+### GET 订单统计接口
+
+GET /admin/report/ordersStatistics HTTP/1.1
+Host: {{host}}
+token: {{jwt}}

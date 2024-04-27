@@ -1,0 +1,82 @@
+# 苍穹外卖-管理端-套餐相关接口
+
+### PUT 修改套餐
+
+PUT /admin/setmeal HTTP/1.1
+Host: {{host}}
+token: {{jwt}}
+Content-Type: application/json
+
+{
+"categoryId": 0,
+"description": "string",
+"id": 0,
+"image": "string",
+"name": "string",
+"price": 0,
+"setmealDishes": [
+{
+"copies": 0,
+"dishId": 0,
+"id": 0,
+"name": "string",
+"price": 0,
+"setmealId": 0
+}
+],
+"status": 0
+}
+
+### DELETE 批量删除套餐
+
+DELETE /admin/setmeal HTTP/1.1
+Host: {{host}}
+token: {{jwt}}
+
+string
+
+### POST 新增套餐
+
+POST /admin/setmeal HTTP/1.1
+Host: {{host}}
+token: {{jwt}}
+Content-Type: application/json
+
+{
+"categoryId": 0,
+"description": "string",
+"id": 0,
+"image": "string",
+"name": "string",
+"price": 0,
+"setmealDishes": [
+{
+"copies": 0,
+"dishId": 0,
+"id": 0,
+"name": "string",
+"price": 0,
+"setmealId": 0
+}
+],
+"status": 0
+}
+
+### GET 分页查询
+
+GET /admin/setmeal/page HTTP/1.1
+Host: {{host}}
+token: {{jwt}}
+
+### POST 套餐起售、停售
+
+POST /admin/setmeal/status/{status} HTTP/1.1
+Host: {{host}}
+token: {{jwt}}
+Content-Type: application/json
+
+### GET 根据 id 查询套餐
+
+GET /admin/setmeal/{id} HTTP/1.1
+Host: {{host}}
+token: {{jwt}}

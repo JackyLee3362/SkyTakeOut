@@ -1,0 +1,14 @@
+# 苍穹外卖-管理端-店铺操作接口
+
+### GET 获取营业状态
+
+GET /admin/shop/status HTTP/1.1
+Host: {{host}}
+token: {{jwt}}
+
+### PUT 设置营业状态
+
+PUT /admin/shop/{status} HTTP/1.1
+Host: {{host}}
+token: {{jwt}}
+Content-Type: application/json

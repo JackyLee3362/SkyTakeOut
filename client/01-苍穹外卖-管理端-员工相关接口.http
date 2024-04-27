@@ -1,0 +1,109 @@
+# 苍穹外卖-管理端-员工相关接口
+
+### POST 员工登录
+
+# 123456 MD5 加密后是 e10adc3949ba59abbe56e057f20f883e
+POST /admin/employee/login HTTP/1.1
+Host: {{host}}
+Content-Type: application/json
+
+{
+    "username": "admin",
+    "password": "123456"
+}
+
+### GET 员工分页查询
+
+# ?page=1&pageSize=10[&name=管理]
+@page=1
+@pageSize=10
+GET /admin/employee/page?page={{page}}&pageSize={{pageSize}} HTTP/1.1
+Host: {{host}}
+token: {{jwt}}
+
+### PUT 修改密码（未实现）
+
+PUT /admin/employee/editPassword HTTP/1.1
+Host: {{host}}
+token: {{jwt}}
+Content-Type: application/json
+
+{
+    "empId": 0,
+    "newPassword": "string",
+    "oldPassword": "string"
+}
+
+### POST 启用、禁用员工账号
+
+# status状态，1为启用 0为禁用
+@id=1
+@status=1
+POST /admin/employee/status/{{status}}?id={{id}} HTTP/1.1
+Host: {{host}}
+token: {{jwt}}
+Content-Type: application/json
+
+{}
+
+
+### POST 新增员工
+
+POST /admin/employee HTTP/1.1
+Host: {{host}}
+token: {{jwt}}
+Content-Type: application/json
+
+{
+    "username": "zhangsan",
+    "name": "张三",
+    "phone": "12345678901",
+    "sex": "1",
+    "idNumber": "123456789012345678"
+}
+
+### PUT 编辑员工信息 --- 1
+
+PUT /admin/employee HTTP/1.1
+Host: {{host}}
+token: {{jwt}}
+Content-Type: application/json
+
+{
+    "id": 2,
+    "idNumber": "987654321012345678",
+    "name": "李四",
+    "phone": "13500001111",
+    "sex": "1",
+    "username": "lisi"
+}
+
+### PUT 编辑员工信息 --- 2
+
+PUT /admin/employee HTTP/1.1
+Host: {{host}}
+token: {{jwt}}
+Content-Type: application/json
+
+{
+    "id": 2,
+    "idNumber": "987654321012345678",
+    "name": "张三",
+    "phone": "13500001111",
+    "sex": "1",
+    "username": "zhangsan"
+}
+
+### GET 根据 id 查询员工
+@id=1
+
+GET /admin/employee/{{id}} HTTP/1.1
+Host: {{host}}
+token: {{jwt}}
+
+### POST 退出登录
+
+POST /admin/employee/logout HTTP/1.1
+Host: {{host}}
+token: {{jwt}}
+Content-Type: application/json

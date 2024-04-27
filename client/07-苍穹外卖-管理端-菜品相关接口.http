@@ -1,0 +1,84 @@
+# 苍穹外卖-管理端-菜品相关接口
+
+### PUT 修改菜品
+
+PUT /admin/dish HTTP/1.1
+Host: {{host}}
+token: {{jwt}}
+Content-Type: application/json
+
+{
+"categoryId": 0,
+"description": "string",
+"flavors": [
+{
+"dishId": 0,
+"id": 0,
+"name": "string",
+"value": "string"
+}
+],
+"id": 0,
+"image": "string",
+"name": "string",
+"price": 0,
+"status": 0
+}
+
+### DELETE 批量删除菜品
+
+DELETE /admin/dish HTTP/1.1
+Host: {{host}}
+token: {{jwt}}
+
+string
+
+### POST 新增菜品
+
+POST /admin/dish HTTP/1.1
+Host: {{host}}
+token: {{jwt}}
+Content-Type: application/json
+
+{
+"categoryId": 0,
+"description": "string",
+"flavors": [
+{
+"dishId": 0,
+"id": 0,
+"name": "string",
+"value": "string"
+}
+],
+"id": 0,
+"image": "string",
+"name": "string",
+"price": 0,
+"status": 0
+}
+
+### GET 根据 id 查询菜品
+
+GET /admin/dish/{id} HTTP/1.1
+Host: {{host}}
+token: {{jwt}}
+
+### GET 根据分类 id 查询菜品
+
+GET /admin/dish/list HTTP/1.1
+Host: {{host}}
+token: {{jwt}}
+
+### GET 菜品分页查询
+
+GET /admin/dish/page HTTP/1.1
+Host: {{host}}
+token: {{jwt}}
+
+### POST 菜品起售、停售
+
+POST /admin/dish/status/{status} HTTP/1.1
+Host: {{host}}
+token: {{jwt}}
+Content-Type: application/json

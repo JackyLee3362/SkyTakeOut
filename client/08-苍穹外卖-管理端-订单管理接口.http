@@ -1,0 +1,72 @@
+# 苍穹外卖-管理端-订单管理接口
+
+### PUT 取消订单
+
+PUT /admin/order/cancel HTTP/1.1
+Host: {{host}}
+token: {{jwt}}
+Content-Type: application/json
+
+{
+"cancelReason": "string",
+"id": 0
+}
+
+### GET 各个状态的订单数量统计
+
+GET /admin/order/statistics HTTP/1.1
+Host: {{host}}
+token: {{jwt}}
+
+### PUT 完成订单
+
+PUT /admin/order/complete/{id} HTTP/1.1
+Host: {{host}}
+token: {{jwt}}
+Content-Type: application/json
+
+string
+
+### PUT 拒单
+
+PUT /admin/order/rejection HTTP/1.1
+Host: {{host}}
+token: {{jwt}}
+Content-Type: application/json
+
+{
+"id": 0,
+"rejectionReason": "string"
+}
+
+### PUT 接单
+
+PUT /admin/order/confirm HTTP/1.1
+Host: {{host}}
+token: {{jwt}}
+Content-Type: application/json
+
+{
+"id": 0
+}
+
+### GET 查询订单详情
+
+GET /admin/order/details/{id} HTTP/1.1
+Host: {{host}}
+token: {{jwt}}
+
+### PUT 派送订单
+
+PUT /admin/order/delivery/{id} HTTP/1.1
+Host: {{host}}
+token: {{jwt}}
+Content-Type: application/json
+
+string
+
+### GET 订单搜索
+
+GET /admin/order/conditionSearch HTTP/1.1
+Host: {{host}}
+token: {{jwt}}
