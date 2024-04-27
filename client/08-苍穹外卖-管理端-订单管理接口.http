@@ -20,7 +20,7 @@ token: {{jwt}}
 
 ### PUT 完成订单
 
-PUT /admin/order/complete/{id} HTTP/1.1
+PUT /admin/order/complete/{{id}} HTTP/1.1
 Host: {{host}}
 token: {{jwt}}
 Content-Type: application/json
@@ -52,13 +52,13 @@ Content-Type: application/json
 
 ### GET 查询订单详情
 
-GET /admin/order/details/{id} HTTP/1.1
+GET /admin/order/details/{{id}} HTTP/1.1
 Host: {{host}}
 token: {{jwt}}
 
 ### PUT 派送订单
 
-PUT /admin/order/delivery/{id} HTTP/1.1
+PUT /admin/order/delivery/{{id}} HTTP/1.1
 Host: {{host}}
 token: {{jwt}}
 Content-Type: application/json

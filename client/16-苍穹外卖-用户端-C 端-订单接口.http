@@ -40,15 +40,15 @@ token: {{jwt}}
 Content-Type: application/json
 
 {
-"addressBookId": 0,
-"amount": 0,
-"deliveryStatus": 0,
-"estimatedDeliveryTime": "yyyy-MM-dd HH:mm:ss",
-"packAmount": 0,
-"payMethod": 0,
-"remark": "string",
-"tablewareNumber": 0,
-"tablewareStatus": 0
+  "addressBookId": 0,
+  "amount": 0,
+  "deliveryStatus": 0,
+  "estimatedDeliveryTime": "yyyy-MM-dd HH:mm:ss",
+  "packAmount": 0,
+  "payMethod": 0,
+  "remark": "string",
+  "tablewareNumber": 0,
+  "tablewareStatus": 0
 }
 
 ### PUT 订单支付
@@ -59,6 +59,6 @@ token: {{jwt}}
 Content-Type: application/json
 
 {
-"orderNumber": "string",
-"payMethod": 0
+  "orderNumber": "string",
+  "payMethod": 0
 }

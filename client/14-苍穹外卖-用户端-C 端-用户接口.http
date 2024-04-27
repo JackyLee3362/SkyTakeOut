@@ -8,7 +8,7 @@ token: {{jwt}}
 Content-Type: application/json
 
 {
-"code": "string"
+  "code": "string"
 }
 
 ### POST 退出

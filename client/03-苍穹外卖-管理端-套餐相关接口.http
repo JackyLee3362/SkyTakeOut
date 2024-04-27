@@ -8,23 +8,23 @@ token: {{jwt}}
 Content-Type: application/json
 
 {
-"categoryId": 0,
-"description": "string",
-"id": 0,
-"image": "string",
-"name": "string",
-"price": 0,
-"setmealDishes": [
-{
-"copies": 0,
-"dishId": 0,
-"id": 0,
-"name": "string",
-"price": 0,
-"setmealId": 0
-}
-],
-"status": 0
+  "categoryId": 0,
+  "description": "string",
+  "id": 0,
+  "image": "string",
+  "name": "string",
+  "price": 0,
+  "setmealDishes": [
+    {
+      "copies": 0,
+      "dishId": 0,
+      "id": 0,
+      "name": "string",
+      "price": 0,
+      "setmealId": 0
+    }
+  ],
+  "status": 0
 }
 
 ### DELETE 批量删除套餐
@@ -43,23 +43,23 @@ token: {{jwt}}
 Content-Type: application/json
 
 {
-"categoryId": 0,
-"description": "string",
-"id": 0,
-"image": "string",
-"name": "string",
-"price": 0,
-"setmealDishes": [
-{
-"copies": 0,
-"dishId": 0,
-"id": 0,
-"name": "string",
-"price": 0,
-"setmealId": 0
-}
-],
-"status": 0
+  "categoryId": 0,
+  "description": "string",
+  "id": 0,
+  "image": "string",
+  "name": "string",
+  "price": 0,
+  "setmealDishes": [
+    {
+      "copies": 0,
+      "dishId": 0,
+      "id": 0,
+      "name": "string",
+      "price": 0,
+      "setmealId": 0
+    }
+  ],
+  "status": 0
 }
 
 ### GET 分页查询

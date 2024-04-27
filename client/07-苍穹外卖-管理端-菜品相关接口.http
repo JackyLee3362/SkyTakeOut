@@ -8,21 +8,21 @@ token: {{jwt}}
 Content-Type: application/json
 
 {
-"categoryId": 0,
-"description": "string",
-"flavors": [
-{
-"dishId": 0,
-"id": 0,
-"name": "string",
-"value": "string"
-}
-],
-"id": 0,
-"image": "string",
-"name": "string",
-"price": 0,
-"status": 0
+  "categoryId": 0,
+  "description": "string",
+  "flavors": [
+    {
+      "dishId": 0,
+      "id": 0,
+      "name": "string",
+      "value": "string"
+    }
+  ],
+  "id": 0,
+  "image": "string",
+  "name": "string",
+  "price": 0,
+  "status": 0
 }
 
 ### DELETE 批量删除菜品
@@ -41,21 +41,21 @@ token: {{jwt}}
 Content-Type: application/json
 
 {
-"categoryId": 0,
-"description": "string",
-"flavors": [
-{
-"dishId": 0,
-"id": 0,
-"name": "string",
-"value": "string"
-}
-],
-"id": 0,
-"image": "string",
-"name": "string",
-"price": 0,
-"status": 0
+  "categoryId": 0,
+  "description": "string",
+  "flavors": [
+    {
+      "dishId": 0,
+      "id": 0,
+      "name": "string",
+      "value": "string"
+    }
+  ],
+  "id": 0,
+  "image": "string",
+  "name": "string",
+  "price": 0,
+  "status": 0
 }
 
 ### GET 根据 id 查询菜品
